@@ -1,0 +1,213 @@
+/* ============================================================
+   Onetouch Enhancer — styles.css  v2.1
+   ============================================================ */
+
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css');
+
+/* ── Toast ─────────────────────────────────────────────────── */
+#bce-toast {
+  position: fixed;
+  top: 16px;
+  right: 16px;
+  z-index: 2147483647;
+  pointer-events: none;
+  font-family: -apple-system, sans-serif;
+  opacity: 0;
+  transform: translateX(12px);
+  transition: opacity 0.18s ease, transform 0.18s ease;
+}
+#bce-toast.bce-toast-show { opacity: 1; transform: translateX(0); }
+#bce-toast.bce-toast-hide { opacity: 0; transform: translateX(12px); }
+
+/* ── Floating panel ──────────────────────────────────────────── */
+#bce-panel {
+  position: fixed;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%) translateX(100%);
+  z-index: 2147483646;
+
+  width: 210px;
+  background: rgba(44, 94, 173, 0.97); /* Swapped to deep blue base */
+  border: 1px solid rgba(75, 184, 250, 0.25);
+  border-right: none;
+  border-radius: 8px 0 0 8px;
+  box-shadow: -4px 0 24px rgba(21, 145, 220, 0.25);
+
+  font-family: -apple-system, sans-serif;
+  overflow: hidden;
+  opacity: 0;
+  pointer-events: none;
+  transition: transform 0.25s cubic-bezier(0.34, 1.2, 0.64, 1),
+              opacity 0.2s ease;
+}
+
+#bce-panel.bce-panel-open {
+  transform: translateY(-50%) translateX(0);
+  opacity: 1;
+  pointer-events: all;
+}
+
+/* Panel header */
+.bce-panel-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 12px 8px;
+  border-bottom: 1px solid rgba(196, 226, 245, 0.15);
+}
+
+.bce-panel-title {
+  font-size: 11px;
+  font-weight: 600;
+  color: rgba(196, 226, 245, 0.9); /* Sky blue header text */
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.bce-panel-close {
+  background: none;
+  border: none;
+  color: rgba(196, 226, 245, 0.4);
+  font-size: 14px;
+  cursor: pointer;
+  padding: 0 2px;
+  line-height: 1;
+  transition: color 0.12s;
+}
+.bce-panel-close:hover { color: rgba(196, 226, 245, 0.9); }
+
+/* Panel body */
+.bce-panel-body {
+  padding: 10px 12px 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+/* Control row */
+.bce-ctrl-row {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.bce-ctrl-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.bce-ctrl-label {
+  font-size: 10px;
+  font-weight: 500;
+  color: rgba(196, 226, 245, 0.5);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+.bce-ctrl-val {
+  font-size: 11px;
+  font-weight: 600;
+  color: #4BB8FA; /* Bright ice blue speed output */
+}
+
+/* Slider */
+.bce-slider {
+  -webkit-appearance: none;
+  width: 100%;
+  height: 2px;
+  background: rgba(196, 226, 245, 0.2);
+  border-radius: 2px;
+  outline: none;
+  cursor: pointer;
+}
+.bce-slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 11px;
+  height: 11px;
+  border-radius: 50%;
+  background: #1591DC; /* Vivid blue slider knob */
+  border: 1.5px solid rgba(196, 226, 245, 0.7);
+  cursor: pointer;
+}
+
+/* Divider */
+.bce-divider {
+  height: 1px;
+  background: rgba(75, 184, 250, 0.15);
+  margin: 1px 0;
+}
+
+/* Shortcuts */
+.bce-shortcuts {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.bce-shortcut-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.bce-shortcut-desc {
+  font-size: 9.5px;
+  color: rgba(255, 255, 255, 0.35);
+}
+
+.bce-kbd {
+  display: inline-block;
+  background: rgba(21, 145, 220, 0.12);
+  border: 1px solid rgba(75, 184, 250, 0.25);
+  border-radius: 3px;
+  padding: 1px 5px;
+  font-size: 8.5px;
+  font-weight: 600;
+  color: rgba(196, 226, 245, 0.8);
+  font-family: inherit;
+}
+
+/* Watermark at bottom of panel */
+.bce-panel-wm {
+  font-size: 8.5px;
+  color: #ffffff; /* Forced text to solid white */
+  text-align: right;
+  letter-spacing: 0.04em;
+  margin-top: 2px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 4px;
+  opacity: 0.9; /* Keeps it clean and sharp against the blue background */
+}
+
+/* Instagram Icon Style */
+.bce-icon-ig {
+  width: 10px;
+  height: 10px;
+  fill: #ffffff; /* Forced vector path to solid white */
+}
+
+/* Toolbar button */
+#bce-toolbar-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  background: rgba(21, 145, 220, 0.15);
+  border: 1px solid rgba(75, 184, 250, 0.3);
+  border-radius: 5px;
+  cursor: pointer;
+  color: rgba(196, 226, 245, 0.8);
+  font-size: 13px;
+  transition: background 0.12s, color 0.12s;
+  margin: 0 3px;
+  flex-shrink: 0;
+}
+#bce-toolbar-btn:hover {
+  background: rgba(21, 145, 220, 0.3);
+  color: #c4e2f5;
+}

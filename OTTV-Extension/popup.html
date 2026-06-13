@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Onetouch Enhancer</title>
+  <style>
+    * { margin:0; padding:0; box-sizing:border-box; }
+    body {
+      width: 220px;
+      background: #0c0618; /* Deep dark blue-tinted base */
+      color: #fff;
+      font-family: 'Inter', -apple-system, sans-serif;
+      font-size: 13px;
+      padding: 14px;
+    }
+    .header {
+      display:flex; align-items:center; gap:8px;
+      margin-bottom:12px; padding-bottom:10px;
+      border-bottom:1px solid rgba(196,226,245,0.08);
+    }
+    .logo {
+      width:26px; height:26px;
+      background: linear-gradient(135deg, #2C5EAD, #1591DC); /* Blue theme gradient */
+      border: 1px solid rgba(75, 184, 250, 0.35);
+      border-radius: 5px; display:flex;
+      align-items: center; justify-content:center; font-size:13px;
+    }
+    .title { font-size:12px; font-weight:700; color:#c4e2f5; } /* Updated to clear sky blue */
+    .subtitle { 
+      font-size:9px; 
+      color: rgba(196, 226, 245, 0.5); 
+      display: flex;
+      align-items: center;
+      gap: 3px;
+      margin-top: 1px;
+    }
+    .subtitle svg { width: 9px; height: 9px; fill: #ffffff; opacity: 0.8; }
+    .hint {
+      font-size:10px; color: rgba(196, 226, 245, 0.7);
+      background: rgba(21, 145, 220, 0.08);
+      border: 1px solid rgba(75, 184, 250, 0.18);
+      border-radius: 5px; padding: 7px 10px;
+      text-align:center; line-height:1.5;
+    }
+    .hint kbd {
+      display:inline-block;
+      background: rgba(21, 145, 220, 0.15);
+      border: 1px solid rgba(75, 184, 250, 0.35);
+      border-radius: 3px; padding:1px 6px;
+      font-size:10px; font-weight:700; color: #4BB8FA;
+    }
+    .footer {
+      margin-top:12px; 
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 4px;
+      font-size:9px; 
+      color: #ffffff; /* White watermark text */
+      opacity: 0.8;
+    }
+    .footer svg { width: 10px; height: 10px; fill: #ffffff; } /* White vector icon */
+  </style>
+</head>
+<body>
+  <div class="header">
+    <div class="logo">⚙️</div>
+    <div>
+      <div class="title">Onetouch Enhancer</div>
+      <div class="subtitle">
+        <svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.051.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+        @monumeeent
+      </div>
+    </div>
+  </div>
+  <div class="hint">
+    Press <kbd>Ctrl+\</kbd> on any<br/>
+    streaming player page to open<br/>the settings panel
+  </div>
+  <div class="footer">
+    <svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.051.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+    @monumeeent
+  </div>
+</body>
+</html>

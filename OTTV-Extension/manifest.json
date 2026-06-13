@@ -1,0 +1,39 @@
+{
+  "manifest_version": 3,
+  "name": "Onetouch Enhancer",
+  "version": "2.1.0",
+  "description": "Playback speed, keyboard shortcuts, and layout adjustments for OnetouchTV",
+  "permissions": ["storage"],
+  "host_permissions": [
+    "https://www.onetouchtv.xyz/*",
+    "https://*.onetouchtv.xyz/*",
+    "https://*.devcorp.me/*"
+  ],
+  "content_scripts": [
+    {
+      "matches": [
+        "https://www.onetouchtv.xyz/*",
+        "https://*.onetouchtv.xyz/*",
+        "https://*.devcorp.me/*"
+      ],
+      "js": ["content.js"],
+      "css": ["styles.css"],
+      "run_at": "document_idle",
+      "all_frames": true
+    }
+  ],
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "Onetouch Enhancer",
+    "default_icon": {
+      "16": "icon16.png",
+      "48": "icon48.png",
+      "128": "icon128.png"
+    }
+  },
+  "icons": {
+    "16": "icon16.png",
+    "48": "icon48.png",
+    "128": "icon128.png"
+  }
+}
